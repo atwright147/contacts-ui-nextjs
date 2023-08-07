@@ -1,0 +1,21 @@
+.layoutGrid {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(100px, max-content) 2fr;
+  grid-template-areas: "left right";
+}
+
+.left {
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-top: 0;
+  border-bottom: 0;
+  grid-area: left;
+
+  max-width: max-content;
+}
+
+.right {
+  grid-area: right;
+}
