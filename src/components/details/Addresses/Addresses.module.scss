@@ -1,5 +1,17 @@
 @use '../base.module.scss';
 
-.address {
+.addresses {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.addressDetail {
   white-space: pre-wrap;
+}
+
+.address {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
 }

@@ -40,7 +40,8 @@ export const ContactsList: FC<Props> = ({ contacts }) => {
         >
           <Avatar
             alt=""
-            className={styles.avatar} size={200}
+            size={200}
+            className={styles.avatar}
             src={`http://localhost:3001/api/v1/avatar/${contact.id}`}
           />
           <div className={styles.container}>

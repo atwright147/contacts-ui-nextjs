@@ -6,6 +6,7 @@ export interface Address {
   city: string,
   county: string,
   postCode: string,
+  isPrimary: number,
 }
 
 export const isAddress = (address: any): address is Address => {
