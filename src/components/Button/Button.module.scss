@@ -11,8 +11,6 @@
   cursor: pointer;
 
   &Icon {
-    --size: 36px;
-
     transition: color .5s ease-in-out;
     cursor: pointer;
 
@@ -31,15 +29,15 @@
     }
   }
 
-  &.primary {
-    background-color: var(--color-active-accent);
-    color: white;
-    font-weight: bold;
-  }
-
   svg {
     pointer-events: none;
   }
+}
+
+.primary {
+  background-color: var(--color-active-accent);
+  color: white;
+  font-weight: bold;
 }
 
 .wide {

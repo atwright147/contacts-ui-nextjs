@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Notifications } from '../components/Notification/Notifications';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +17,13 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <app-spinner></app-spinner>
+        <app-notifications></app-notifications>
+        <app-context-menu></app-context-menu> */}
+        <Notifications />
+        {children}
+      </body>
     </html>
   )
 }

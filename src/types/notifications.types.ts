@@ -1,3 +1,5 @@
+import { Uuid } from './uuid.type';
+
 export enum NotificationType {
   SUCCESS = 'success',
   ERROR = 'error',
@@ -6,7 +8,7 @@ export enum NotificationType {
 }
 
 export interface Notification {
-  id: string;
+  id: Uuid;
   type: string,
   body: string,
 }

@@ -1,45 +1,45 @@
 import { FC, JSX } from 'react';
-import Link from 'next/link';
 import { MdForum, MdGroup, MdHome, MdLockOpen, MdLockOutline, MdOutlineCalendarMonth, MdPhone, MdSettings } from 'react-icons/md';
 
 import styles from './Nav.module.scss';
+import { NavLink } from '../NavLink/NavLink';
 
 export const Nav: FC = (): JSX.Element => {
   return (
     <div className={styles.nav}>
-      <Link className={styles.navItem} href='/'>
+      <NavLink className={styles.navItem} href='/'>
         <MdHome />
-      </Link>
+      </NavLink>
 
-      <Link className={styles.navItem} href='/messages'>
+      <NavLink className={styles.navItem} href='/messages'>
         <MdForum />
-      </Link>
+      </NavLink>
 
-      <Link className={styles.navItem} href='/calls'>
+      <NavLink className={styles.navItem} href='/calls'>
         <MdPhone />
-      </Link>
+      </NavLink>
 
-      <Link className={styles.navItem} href='/contacts'>
+      <NavLink className={styles.navItem} activeClassName={styles.active} href='/contacts'>
         <MdGroup />
-      </Link>
+      </NavLink>
 
-      <Link className={styles.navItem} href='/calendar'>
+      <NavLink className={styles.navItem} href='/calendar'>
         <MdOutlineCalendarMonth />
-      </Link>
+      </NavLink>
 
-      <Link className={styles.navItem} href='/settings'>
+      <NavLink className={styles.navItem} href='/settings'>
         <MdSettings />
-      </Link>
+      </NavLink>
 
       {/* if user is logged in */}
-      <Link className={styles.navItem} href='/logout'>
+      <NavLink className={styles.navItem} href='/logout'>
         <MdLockOpen />
-      </Link>
+      </NavLink>
 
       {/* if user is not logged in */}
-      <Link className={styles.navItem} href='/login'>
+      <NavLink className={styles.navItem} href='/login'>
         <MdLockOutline />
-      </Link>
+      </NavLink>
     </div >
   );
 }

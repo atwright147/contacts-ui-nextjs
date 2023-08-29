@@ -9,6 +9,7 @@ import { isoToLocaleString } from '../../../helpers/date/date.helper';
 import { Favourite } from '../../Favourite/Favourite';
 import { Comments } from '../../details/Comments/Comments';
 import { Avatar } from '../../Avatar/Avatar';
+import { ContactButtonBar } from '../ContactButtonBar/ContactButtonBar';
 import styles from './ContactDetails.module.scss';
 
 export const ContactDetails = () => {
@@ -35,8 +36,10 @@ export const ContactDetails = () => {
                 <String string={`${selected.firstName} ${selected.lastName}`} />
                 <Favourite isFavourite={!!selected.isFavourite} />
               </div>
+
               <String string={selected.jobTitle} />
               <String string={isoToLocaleString(selected.dateOfBirth)} />
+              <ContactButtonBar />
             </div>
           </section>
 

@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import { Nav } from '../../components/Nav/Nav';
+import logo from '../../../public/logo.svg';
 
 import styles from './layout.module.scss';
 
@@ -11,13 +13,9 @@ interface Props {
 
 export default function ContactsLayout({ children, list, details }: Props) {
   return (
-    // <app-spinner></app-spinner>
-    // <app-notifications></app-notifications>
-    // <app-context-menu></app-context-menu>
-
     <div className={styles.layoutGrid}>
       <div className={styles.navContainer}>
-        <img src="/logo.svg" alt="" className={styles.logo} />
+        <Image src={logo} alt="" className={styles.logo} width={45} />
 
         <nav className={styles.nav}>
           <Nav />
@@ -28,7 +26,6 @@ export default function ContactsLayout({ children, list, details }: Props) {
         {list}
         {details}
         {children}
-        xxx
       </main>
     </div>
   );
