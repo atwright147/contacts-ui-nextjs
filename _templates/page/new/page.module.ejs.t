@@ -1,5 +1,5 @@
 ---
-to: src/app/<%= name.toLowerCase() %>/page.module.scss
+to: src/app/<%= route %>/page.module.scss
 ---
 .page {
   // page styles
