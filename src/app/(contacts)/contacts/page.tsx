@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import { ListHeader } from '../../../components/contacts/ListHeader/ListHeader';
 import { ContactsList } from '../../../components/contacts/ContactsList/ContactsList';
@@ -11,6 +12,7 @@ export default async function Page() {
 
   return (
     <div className={styles.layoutGrid}>
+      <h1>Testing</h1>
       <div className={classNames(styles.column, styles.left)}>
         <ListHeader />
         <ContactsList contacts={contacts} />
