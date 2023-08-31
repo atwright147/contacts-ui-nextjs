@@ -1,5 +1,3 @@
-'use client';
-
 import { JSX } from 'react';
 import { MdMenu } from 'react-icons/md';
 import { Button } from '../../Button/Button';
