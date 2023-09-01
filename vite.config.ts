@@ -7,6 +7,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    setupFiles: [path.resolve(__dirname, 'test/setup.ts')],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'clover', 'json', 'lcov'],
@@ -14,6 +15,11 @@ export default defineConfig({
         'demos/**',
         'scripts/**',
       ],
+    },
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
     },
   },
   resolve: {
