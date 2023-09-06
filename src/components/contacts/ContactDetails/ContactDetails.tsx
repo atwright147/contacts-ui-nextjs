@@ -11,6 +11,7 @@ import { Comments } from '../../details/Comments/Comments';
 import { Avatar } from '../../Avatar/Avatar';
 import { ContactButtonBar } from '../ContactButtonBar/ContactButtonBar';
 import styles from './ContactDetails.module.scss';
+import { Date } from '../../details/Date/Date';
 
 export const ContactDetails = () => {
   const selected = useContactsStore(store => store.selected);
@@ -38,7 +39,7 @@ export const ContactDetails = () => {
               </div>
 
               <String string={selected.jobTitle} />
-              <String string={isoToLocaleString(selected.dateOfBirth)} />
+              <Date date={selected.dateOfBirth} />
               <ContactButtonBar />
             </div>
           </section>
